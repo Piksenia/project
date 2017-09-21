@@ -35,5 +35,8 @@
 	<classpathentry kind="lib" path="C:/Users/Xenia/.p2/pool/plugins/org.eclipse.equinox.common_3.9.0.v20170207-1454.jar" sourcepath="C:/Users/Xenia/.p2/pool/plugins/org.eclipse.equinox.common_3.9.0.v20170207-1454.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Xenia/.p2/pool/plugins/com.ibm.icu_58.2.0.v20170418-1837.jar" sourcepath="C:/Users/Xenia/.p2/pool/plugins/com.ibm.icu_58.2.0.v20170418-1837.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Xenia/Desktop/pokemon_master_trainer/Konzeptionsphase/board"/>
+	<classpathentry kind="lib" path="C:/Users/Xenia/Desktop/Softwareentwicklung/Dokumententsammlung/Java/third_party_libary/eclipselink/jlib/eclipselink.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Xenia/Desktop/Softwareentwicklung/Dokumententsammlung/Java/third_party_libary/eclipse/plugins/org.eclipse.swt_3.106.0.v20170608-0516.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Xenia/Desktop/Softwareentwicklung/Dokumententsammlung/Java/JPA/eclipselink/jlib/jpa/javax.persistence_2.1.0.v201304241213.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
