@@ -60,6 +60,9 @@ public class SpielAktiv {
 		return a;
 	}
 	
+		
+	
+	
 	public static Vertex gehen(Vertex start, int zahl, Spieler sp) {
 		Vertex x = null;
 		Vertex vorherig = null;
@@ -70,7 +73,19 @@ public class SpielAktiv {
 		if(zahl > a) {
 		i = zahl + a;
 		x = AufbauMap.ALL[i];
-		}else {
+		}
+		else if(a == 57){
+		
+			while(zahl > 0) {
+				vorherig = AufbauMap.ALL[i];
+				i = a - hochzaehlen;
+				x = AufbauMap.ALL[i];
+				--zahl;
+				x = pruefAbzweigung(x, vorherig);
+				a = schrittfelderpruefung(x);
+				}
+		}
+		else {
 			// Bestägungsdialog; 
 			Object[] options = {"Voran", "Zurück"};
 			int selected = JOptionPane.showOptionDialog(null, "Treffen Sie eine Auswahl","Entscheidung für Spieler: "+ sp.getFarbe(),JOptionPane.DEFAULT_OPTION, 
@@ -99,6 +114,10 @@ public class SpielAktiv {
 		}	
 		
 		return x;
+	}
+	
+	public static void runtergehen(Vertex x, Vertex vor) {
+		
 	}
 	
 	
@@ -472,6 +491,20 @@ public class SpielAktiv {
 			case 1:
 				//s01
 				neu = AufbauMap.ALL[0];
+			break;
+			case 53:
+				//s01
+				Object[] options = {"Prismania", "Orania/Lavandia"};
+				int selected = JOptionPane.showOptionDialog(null, "Treffen Sie eine Auswahl","Entscheidung",JOptionPane.DEFAULT_OPTION, 
+	                    JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+				if (selected == 0) {
+					//s51
+					neu = AufbauMap.ALL[50];
+				}
+				else if (selected == 1) {
+					//s75
+					neu = AufbauMap.ALL[74];
+				}
 			break;
 		}
 		return neu;
