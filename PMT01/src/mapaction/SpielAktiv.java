@@ -102,14 +102,21 @@ public class SpielAktiv {
 				
 			} else if (selected == 1) {
 				while(zahl > 0) {
+				
 				vorherig = AufbauMap.ALL[i];
+				if(!vorherig.equals(AufbauMap.ALL[1])){
 				i = a - hochzaehlen;
+				
 				x = AufbauMap.ALL[i];
 				--zahl;
 				x = pruefAbzweigung(x, vorherig);
 				a = schrittfelderpruefung(x);
+				}else {
+					x = AufbauMap.ALL[0];
+					zahl = 0;
 				}
 				x = AufbauMap.ALL[i];
+				}
 			} 
 		}	
 		
