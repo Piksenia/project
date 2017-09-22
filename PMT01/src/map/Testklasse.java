@@ -86,69 +86,11 @@ public class Testklasse {
 		AufbauMap.ALL[73].adjacencies = new Edge[] { new Edge(AufbauMap.ALL[74]), new Edge(AufbauMap.ALL[73])};
 		AufbauMap.ALL[74].adjacencies = new Edge[] { new Edge(AufbauMap.ALL[52]), new Edge(AufbauMap.ALL[74])};
 		
-		//Testfall02
+		
+		//Window als Startpunkt für die komplette Anwendung
 
-		final Object lock = new Object();
-
-
-		//JFrame frame = new JFrame("Pokemon Meister Trainer - Online by Piksenia");	
-
-		//ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		//URL resource =  this.getClass().getClassLoader().getResource("./images/board_colored_small.png");
-		//URL url = this.getClass().getClassLoader().getResource("images/a.png");
-		//ImageIO.read(is);
-		//URL resource = classLoader.getResource("./images/board_colored_small.png");
-		//ImageIcon img = new ImageIcon(resource);
 		Window window = new Window();
-		//com.sun.awt.AWTUtilities.setWindowOpacity(window, 0.5f);
-		
-		
-
-		/*new Thread() {
-			public void run() {
-				 ArrayList<Spieler> spieler = Spielvorbereitung.beginn("Red", "Glumanda", "Blue", "Schiggy");
-					boolean spielfluss = true;
-					int zaehler = 0;
-					
-							++zaehler;
-							System.out.println("Runde "+zaehler+ ": ////////////");
-							SpielAktiv.zug(spieler.get(0));
-							SpielAktiv.zug(spieler.get(1));
-							System.out.println();
-							Object[] options = {"Nächste Runde", "Beenden"};
-							int selected = JOptionPane.showOptionDialog(null, "Möchten Sie das Spiel beenden? ","Quit Game",JOptionPane.DEFAULT_OPTION, 
-					                JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
-							if (selected == 0) {
-								run();
-							}
-							else if(selected == 1) {
-								spielfluss = false;
-							}
-							window.repaint();
-								
-							
-						
-						
-			}
-		}.start();*/
-		
-		
-		
-			 
-
-		
-		
-        
-			
-
-			
         }
-		
-		
-	
-			
-	
-	
 }
 
 

@@ -32,22 +32,8 @@ public class Window extends JFrame{
 	
 	public Window()  throws Exception{
 		setTitle("Pokemon Meister Trainer - Online by Piksenia");
-		
-		//BufferedImage img = ImageIO.read(new File("board_colored_small.png"));
-		
-		
-		//BufferedImage img = ImageIO.read(getClass().getResource("board_colored_small.png"));
-		
-		//BufferedImage img = ImageIO.read(Window.class.getResource("C:/Users/Xenia/Desktop/pokemon_master_trainer/Implementierung/PMT01/src/images/board_colored_small.png"));
-		//ImageIcon img = new ImageIcon(image);
-		//URL url = this.getClass().getClassLoader().getResource("./pictures/board_colored_small.png");
-		//ImageIcon img = new ImageIcon(url);
-		
 		img = ImageIO.read(getClass().getResource("/map/board_colored_small.png"));
-		//img = ImageIO.read(new File("src\\map\\board_colored_small.png"));
 		
-		//String imageResource = "src/images/board_colored_small.png";
-		//Image img = ImageIO.read(getClass().getResourceAsStream(imageResource));
 		DrawSpieler p1 = new DrawSpieler("red");
 		DrawSpieler p2 = new DrawSpieler("blue");
 		JPanel jp = new JPanel(new BorderLayout());
@@ -57,42 +43,37 @@ public class Window extends JFrame{
         
 
         setContentPane(new JLabel(new ImageIcon(img)));
-
-
-        //setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-        
-        //setUndecorated(true);
-        //setBackground(new Color(213, 134, 145, 123));
-        
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridwidth = GridBagConstraints.REMAINDER;
-        //getContentPane().add(p1);
-        
-        //frame.add(p2,gbc);
         pack();
 
         setLocationRelativeTo(null);
         setVisible(true);
         add(p1,gbc);
-        //add(p2,gbc);
         
         new Thread() {
         	@Override
 			public void run() {
-        		draw();
+        		try {
+					draw();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
         	}
         	
         }.start();
 	}
 	
-	private void draw() {
+	private void draw() throws InterruptedException {
 		while(true) {
+			Thread.sleep(1000);
 			game(spieler.get(0));
 
 			try {
 	            System.out.println("inside thread");
-	            Thread.sleep(2000);
+	            Thread.sleep(1000);
 	        } 
 	        catch (InterruptedException e) {
 	            e.printStackTrace();
