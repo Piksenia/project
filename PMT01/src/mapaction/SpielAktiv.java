@@ -116,10 +116,6 @@ public class SpielAktiv {
 		return x;
 	}
 	
-	public static void runtergehen(Vertex x, Vertex vor) {
-		
-	}
-	
 	
 	public static Vertex pruefAbzweigung(Vertex x, Vertex vor) {
 		int vorher = 0;
